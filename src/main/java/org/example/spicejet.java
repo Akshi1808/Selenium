@@ -25,6 +25,10 @@ public class spicejet {
         driver.get("https://www.spicejet.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofDays(60));
 
+        List<WebElement> buttons= driver.findElements(By.xpath("//div[@class = 'css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-117bsoe r-1otgn73']/div[1]"));
+        WebElement button = buttons.get(1);
+        button.click();
+
         List<WebElement> elements = driver.findElements(By.xpath("//div[@class = 'css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep']/input[1]"));
 
         for (WebElement element : elements) {
