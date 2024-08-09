@@ -17,7 +17,9 @@ public class Ecommerce {
 
         WebDriver driver = new ChromeDriver();
 
-        String[] itemsNeeded = {"Cucumber", "Brocolli", "Beetroot", "Beans", "Brinjal"};
+        driver.manage().window().maximize();
+
+        String[] itemsNeeded = {"Cucumber", "Brocolli", "Beetroot", "Beans", "Brinjal", "Onion", "Orange", "Pears"};
 
         driver.get("https://rahulshettyacademy.com/seleniumPractise/");
 
@@ -27,7 +29,7 @@ public class Ecommerce {
 
     }
 
-    public static void addItems(WebDriver driver, String[] itemsNeeded) {
+    public static void addItems(WebDriver driver, String[] itemsNeeded) throws InterruptedException {
 
         int j = 0;
 
@@ -64,6 +66,23 @@ public class Ecommerce {
 
             }
         }
+
+        driver.findElement(By.xpath("//a[@class='cart-icon']")).click();
+        Thread.sleep(1000);
+
+        driver.findElement(By.xpath("//div[@class='cart-preview active']/div/button")).click();
+        Thread.sleep(1000);
+
+        driver.findElement(By.xpath("//div[@class='promoWrapper']/input")).sendKeys("abcde");
+        Thread.sleep(1000);
+
+        driver.findElement(By.xpath("//div[@class='promoWrapper']/button")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//*[@id='root']/div/div/div/div/button")).click();
+        Thread.sleep(2000);
+
+        driver.quit();
 
     }
 }
