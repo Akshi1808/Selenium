@@ -8,7 +8,6 @@ public class Alert {
 
     public static void main(String[] args) {
 
-
         String text = "Deep";
 
         System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver-win64\\chromedriver.exe");
