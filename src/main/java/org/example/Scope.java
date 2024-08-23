@@ -15,6 +15,7 @@ public class Scope {
 
         WebDriver driver=new ChromeDriver();
 
+
         driver.get("http://qaclickacademy.com/practice.php");
 
         //1. Give me the count of links on the page
