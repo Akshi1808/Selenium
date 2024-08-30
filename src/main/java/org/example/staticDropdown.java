@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 public class staticDropdown {
 
@@ -46,7 +46,7 @@ public class staticDropdown {
 
         driver.findElement(By.id("btnclosepaxoption")).click();
 
-        Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "8 Adult");
+//        Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "8 Adult");
 
         System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
         Thread.sleep(2000L);

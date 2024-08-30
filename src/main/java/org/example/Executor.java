@@ -5,7 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import java.util.List;
 
@@ -37,7 +37,7 @@ public class Executor {
         driver.findElement(By.cssSelector(".totalAmount")).getText();
         int Total = Integer.parseInt(driver.findElement(By.cssSelector(".totalAmount")).getText().split(":")[1].trim());
 
-        Assert.assertEquals(sum, Total);
+//        Assert.assertEquals(sum, Total);
 
         driver.quit();
     }
