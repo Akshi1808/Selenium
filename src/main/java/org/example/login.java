@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-//import org.testng.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.remote.http.WebSocket;
 
 
@@ -38,9 +38,9 @@ public class login {
 
         System.out.println(driver.findElement(By.tagName("p")).getText());
 
-//        Assert.assertEquals(driver.findElement(By.tagName("p")).getText(), "You are successfully logged in.");
-//
-//        Assert.assertEquals(driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText(),"Hello "+name+",");
+        Assert.assertEquals(driver.findElement(By.tagName("p")).getText(), "You are successfully logged in.");
+
+        Assert.assertEquals(driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText(),"Hello "+name+",");
 
         driver.findElement(By.xpath("//*[text()='Log Out']")).click();
 

@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import org.testng.Assert;
+import org.testng.Assert;
 
 public class CalendarTest {
 
@@ -49,7 +49,7 @@ public class CalendarTest {
 
             System.out.println(actualList.get(i).getAttribute("value"));
 
-//            Assert.assertEquals(actualList.get(i).getAttribute("value"), expectedList[i]);
+            Assert.assertEquals(actualList.get(i).getAttribute("value"), expectedList[i]);
 
         }
 
